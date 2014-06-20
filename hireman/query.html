@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="robots" content="noindex,nofollow" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Hireman Query Form</title>
+		<meta name="description" content="Query Form, Typically Account Invoice Requests">
+		<meta name="author" content="Chris Lannister">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<!-- Scripts -->
+		<link async rel="stylesheet" type="text/css" href="css/styles.css">				
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> 
+		<script src="js/script.js"></script>
+		</head>
+<body>
+		<div class="wrapper">
+			<form name="qform" method="post" action="form.php">
+				
+				<header>
+					<img src="img/logo.png"><h1>Invoice<br>Query Form</h1>
+				</header>
+<!-- Your Details -->
+				<div class="centerDiv"><h3>Your Details</h3>
+					<p class="alignLabel">
+						Company Name:
+						<input autofocus class="alignInput" type="text" name="companyName" maxlength="50" size="30">
+					</p>
+					<p class="alignLabel">
+						Contact:
+						<input class="alignInput" type="text" name="contact" maxlength="50" size="30">
+					</p>
+					<p class="alignLabel">
+						Phone Number:
+						<input class="alignInput" type="text" name="phone" maxlength="50" size="30">
+					</p>
+					<p class="alignLabel">
+						Email:
+						<input type="email" class="alignInput" type="text" name="email" maxlength="50" size="30">
+					</p>
+				</div>
+<!-- Invoice Query -->
+				<div class="centerDiv"><h3>Invoice Query</h3></div>
+				<div id="p_scents"><!-- Invoice Query Add Another Text Field, Increments Name by +1 -->
+					<p>
+						<input type="text"  size="60" name="invNo[]" value="" placeholder="Invoice No/Contract No" />
+						<select name="typeOfQueryDropDownBox[]">
+							<option selected="selected" disabled="disabled" value="blank">Select Type of Query</option><option value="Hire Rate">Hire Rate Query</option><option value="Sales Price">Sales Price Query</option><option value="Damge Or Loss">Damage/Loss Query</option>
+							<option value="Paper Work">Paperwork Request</option><option value="On/Off Hire Dates">On/Off Hire Dates</option><option value="Other">Other</option>
+						</select>						<textarea name="details[]" rows="6" cols="20" placeholder="Details"></textarea>
+</p>				</div><h5><a href="#" id="addScnt" >Add Another Query</a></h5><!-- General Query -->
+<!-- General Query -->
+				<div class="centerDiv" ><h3>General Query</h3>
+					<p>
+						Please provide details:
+						<br>
+						<textarea name="generalDetails" rows="10" cols="20"></textarea>
+</p>					<p class="requireBoxP">
+						Do you require:
+						<br>
+						<br>
+						Hire Rates
+						<br>
+						<select name="hireRatesCB">
+							<option value="x">No</option><option value="Hire Rates">Yes</option>
+						</select>
+						<br>
+						Supply Catalogues
+						<br>
+						<select name="salesmanVistCB">
+							<option value="x">No</option><option value="Supply Catalogues">Yes</option>
+						</select><!-- Submit Button -->
+						<input class="submitBtn" type="submit" value="Submit">
+			</form><footer></footer>
+			
+		</div><!-- End of wrapper -->
+	</body>
+</html>
